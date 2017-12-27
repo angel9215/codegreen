@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'source_code_pro';
+    src: url('sourcecodepro-bold.woff2') format('woff2'),
+         url('sourcecodepro-bold.woff') format('woff'),
+         url('sourcecodepro-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'source_code_pro';
+    src: url('sourcecodepro-it.woff2') format('woff2'),
+         url('sourcecodepro-it.woff') format('woff'),
+         url('sourcecodepro-it.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'source_code_pro';
+    src: url('sourcecodepro-regular.woff2') format('woff2'),
+         url('sourcecodepro-regular.woff') format('woff'),
+         url('sourcecodepro-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

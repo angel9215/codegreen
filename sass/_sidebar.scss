@@ -1,0 +1,68 @@
+$sidebarBaseMargin: $baseMargin;
+$sidebarWidgetMarginMult: 2;
+$sidebarWidgetPadding: $basePadding;
+$sidebarBorderRadius: $borderRadius;
+$sidebarBorderRadiusFallback: $borderRadiusFallback;
+$sidebarBorderShadow: $borderShadow;
+$sidebarBackgroundColor: $backgroundColor2;
+$sidebarTitleTransparency: $backgroundTransparency2;
+$sidebarContentTransparency: $backgroundTransparency1;
+$sidebarTitleBackground: rgba($sidebarBackgroundColor, $sidebarTitleTransparency);
+$sidebarContentBackground: rgba($sidebarBackgroundColor, $sidebarContentTransparency);
+$sidebarWidgetTitleFont: $titleFont;
+$sidebarWidgetTitleTextShadow: $textShadow;
+
+.widget-area .widget {
+    /*Sizing*/
+        margin-bottom: $sidebarBaseMargin * $sidebarWidgetMarginMult;
+        overflow: hidden;
+    /*Presentation*/
+        box-shadow: $sidebarBorderShadow;
+
+        border-radius: $sidebarBorderRadiusFallback;
+        border-radius: $sidebarBorderRadius;
+    /*Text*/
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+}
+
+.widget-area .widget:last-child {
+    /*Sizing*/
+        margin-bottom: 0;
+}
+
+.widget-area .widget-title {
+    /*Sizing*/
+        padding: 0 $sidebarWidgetPadding;
+        margin: 0;
+
+        overflow: hidden;
+    /*Presentation*/
+        background-color: $sidebarBackgroundColor;
+        background-color: $sidebarTitleBackground;
+    /*Text*/
+        font-family: $sidebarWidgetTitleFont;
+        text-shadow: $sidebarWidgetTitleTextShadow;
+        
+}
+
+.widget-area .widget-content {
+    /*Sizing*/
+        padding: $sidebarWidgetPadding;
+        overflow: auto; /*Fixes margin collapse*/
+    /*Presentation*/
+        background-color: $sidebarBackgroundColor;
+        background-color: $sidebarContentBackground;
+}
+
+.widget-area ul {
+    /*Sizing*/
+        padding: 0;
+        margin: 0;
+    /*Presentation*/
+        list-style-type: none;
+}
+
+/*.widget ul, .widget p {
+    margin: 0;
+}*/

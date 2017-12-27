@@ -1,0 +1,203 @@
+$menuBackgroundColor: $backgroundColor2;
+$menuBackgroundTransparency: $backgroundTransparency2;
+$menuBackground: rgba($menuBackgroundColor, $menuBackgroundTransparency);
+$menuContentWidth: $contentWidth;
+$menuFontSize: $globalMenuFontSize;
+$menuHighlightBackgroundTransparency: $backgroundTransparency3;
+$menuHighlightBackground: rgba($menuBackgroundColor, $menuHighlightBackgroundTransparency);
+$menuBorderShadow: $borderShadow;
+$menuBorderRadiusFallback: $borderRadiusFallback;
+$menuBorderRadius: $borderRadius;
+$menuItemPadding: 0.5em;
+$menuCurrentItemIconRightMargin: 0.2em;
+$menuCurrentItemIconFontSize: 0.8em;
+$menuSubmenuIconFontSize: 0.6em;
+$menuItemTextShadow: $textShadow;
+
+
+.main-navigation {
+    /*Presentation*/
+        background-color: $menuBackground;
+}
+
+.main-navigation-content {
+    /*Sizing*/
+        width: $menuContentWidth;
+}
+/*
+    Bootstrap classes:
+        .center-block
+*/
+
+.primary-menu {
+    /*Text*/
+        font-size: $menuFontSize;
+}
+
+.primary-menu .menu-search-button {
+    /*Sizing*/
+        float: right;
+}
+
+.wp-menu {
+    /*Presentation*/
+        background-color: $menuBackground;  
+}
+
+.primary-menu {
+    /*Presentation*/
+        background-color: transparent;
+}
+
+.wp-menu .menu-item:hover {
+    /*Presentation*/
+        background-color: $menuHighlightBackground;
+}
+
+.wp-menu .sub-menu {
+    /*Sizing*/
+        margin: 0;
+        padding: 0;
+        z-index: 1;
+        
+        /* hides all submenus */
+        /*positions submenus next to/under sources*/
+        position: absolute;
+        display: none;
+    /*Presentation*/
+        box-shadow: $menuBorderShadow;
+        background-color: $menuBackground;
+        
+        border-radius: $menuBorderRadiusFallback;
+        border-radius: $menuBorderRadius;
+    /*Text*/
+        list-style-type: none;
+}
+
+.wp-menu .menu-item {
+    /*Sizing*/
+        padding: $menuItemPadding;
+    /*Presentation*/
+        border-radius: $menuBorderRadiusFallback;
+        border-radius: $menuBorderRadius;
+    /*Text*/
+        white-space: nowrap;
+        text-shadow: $menuItemTextShadow;
+}
+
+.wp-menu .menu-item a {
+    /*Text*/
+        color: $textColor1;
+        text-decoration: none;
+}
+
+.wp-menu .menu-root {
+    /*Text*/
+        text-align: center;
+}
+
+.wp-menu .menu-root {
+    /*Sizing*/
+        margin: 0;
+        padding: 0;
+    /*Text*/
+        list-style-type: none;
+}
+
+.wp-menu .menu-item-has-children {
+    /*Sizing*/
+        /*position items with sub-menus as relative (sub-menu position source)*/
+        position: relative;
+}
+
+.wp-horizontal-menu .menu-root > .menu-item {
+    /*Sizing*/
+        /*display level 0 horizontally*/
+        float: left;
+}
+
+.wp-horizontal-menu .sub-menu {
+    /*Text*/
+        text-align: left;
+}
+
+.wp-horizontal-menu .menu-root > .menu-item-has-children > .sub-menu .sub-menu {
+    /*Sizing*/
+        /* target second level+ menus */
+        /* position submenus next to sources */
+        top: 0;
+        left: 100%;
+}
+
+
+.wp-horizontal-menu .menu-root > .menu-item-has-children > .sub-menu {
+    /*Sizing*/
+        /* target first level menu only */
+        /* position menu right under source (fix right displacement) */
+        left: 0;
+}
+
+.wp-css-menu .menu-item-has-children:hover > .sub-menu {
+    /*Sizing*/
+        /*css view on hover*/
+        display: block;
+}
+
+.wp-menu .menu-item:before {
+    /*Asterisk icon*/
+    @include create-font-icon-styling($fontFamily: 'Glyphicons Halflings', $lineHeight: normal, $display: inline-block);
+    @include create-font-icon-content('\2a');
+    
+    /*Sizing*/
+        position: relative;
+        top: 1px;
+        margin-right: $menuCurrentItemIconRightMargin;
+    /*Presentation*/
+        visibility: hidden;
+    /*Text*/
+        font-size: $menuCurrentItemIconFontSize;
+        
+}
+
+.wp-menu .menu-item:after {
+    /*Right arrow icon*/
+    @include create-font-icon-styling($fontFamily: 'Glyphicons Halflings', $lineHeight: normal, $display: inline-block);
+    @include create-font-icon-content('\e250');
+    
+    /*Sizing*/
+        position: relative;
+        top: 1px;
+        margin-left: -0.2em;
+    /*Presentation*/
+        visibility: hidden;
+    /*Text*/
+        font-size: $menuSubmenuIconFontSize;
+}
+
+.wp-horizontal-menu .menu-root > .menu-item:after {
+    /*Down arrow icon*/
+    @include create-font-icon-content('\e252');
+    
+    /*Text*/
+        vertical-align: sub;
+}
+
+.primary-menu .menu-search-button:before {
+    /*Text*/
+        content: '';
+}
+
+.primary-menu .menu-search-button:after {
+    /*Text*/
+        content: '';
+}
+
+.wp-menu .current-menu-item:before {
+    /*Presentation*/
+        visibility: visible;
+}
+
+.wp-menu .menu-item-has-children:after {
+    /*Presentation*/
+        visibility: visible;
+}

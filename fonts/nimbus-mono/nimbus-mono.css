@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'nimbus_mono';
+    src: url('nimbusmono-bold.woff2') format('woff2'),
+         url('nimbusmono-bold.woff') format('woff'),
+         url('nimbusmono-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nimbus_mono';
+    src: url('nimbusmono-oblique.woff2') format('woff2'),
+         url('nimbusmono-oblique.woff') format('woff'),
+         url('nimbusmono-oblique.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'nimbus_mono';
+    src: url('nimbusmono-regular.woff2') format('woff2'),
+         url('nimbusmono-regular.woff') format('woff'),
+         url('nimbusmono-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,123 @@
+$layoutContentWidth: $contentWidth;
+$layoutContentMinWidth: $contentMinWidth;
+$layoutHeaderHeight: $globalHeaderHeight;
+$layoutPrimaryMenuMarginMult: 4;
+$layoutHeaderMarginMult: 4;
+$layoutContentMarginMult: 4;
+$layoutContentMarginHorMult: 2;
+$layoutFooterMinHeight: $globalFooterMinHeight;
+$layoutBaseMargin: $baseMargin;
+$layoutBorderShadow: $borderShadow;
+
+/*
+    Bootstrap classes:
+            
+*/
+
+.site {
+    /*Sizing*/
+        width: $layoutContentWidth;
+        min-width: $layoutContentMinWidth;
+}
+/*
+    Bootstrap classes:
+       .center-block 
+*/
+
+.widget-area {
+    /*Sizing*/
+        min-width: 350px;
+}
+
+.site-header {
+    /*Sizing*/
+        /*height: $layoutHeaderHeight;*/
+        margin-bottom: $layoutBaseMargin * $layoutHeaderMarginMult;
+}
+/*
+    Bootstrap classes:
+        .clearfix
+*/
+
+.main-navigation {
+    /*Sizing*/
+        margin-bottom: $layoutBaseMargin * $layoutPrimaryMenuMarginMult;
+    /*Presentation*/
+        box-shadow: $layoutBorderShadow;
+}
+/*
+    Bootstrap classes:
+        .clearfix
+*/
+
+.site-content {
+    /*Sizing*/
+        padding: 0;
+        margin-bottom: $layoutBaseMargin * $layoutContentMarginMult;
+}
+/*
+    Bootstrap classes:
+        .container-fluid
+        .clearfix
+*/
+
+.content-area {
+    /*Sizing*/
+        margin-right: $layoutBaseMargin * $layoutContentMarginHorMult;
+}
+
+.widget-area {
+    /*Sizing*/
+       padding: 0; 
+}
+/*
+    Bootstrap classes:
+        .col-md-4
+*/
+
+.content-area {
+    /*Presentation*/
+        box-shadow: $layoutBorderShadow;
+}
+/*
+    Bootstrap classes:
+        .col-md-8
+*/
+
+.site-footer {
+    /*Sizing*/
+       min-height: $layoutFooterMinHeight; 
+}
+
+@media (min-width: 992px) {
+    /*Normal view*/
+    /*Flex based layout*/
+    
+    .site-content {
+        /*Sizing*/
+            display: flex;
+            flex-direction: row;
+    }
+    
+    .content-area {
+        /*Sizing*/
+            flex-grow: 1;
+    }
+    
+    .widget-area {
+        /*Sizing*/
+            flex-shrink: 1;
+            width: auto;
+            max-width: 33.3333%;
+    }
+}
+
+@media (max-width: 992px) {
+    /*Collapsed view*/
+    
+    .content-area {
+        /*Sizing*/
+           margin-right: 0;
+           margin-bottom: $layoutBaseMargin * $layoutContentMarginMult; 
+    }
+}

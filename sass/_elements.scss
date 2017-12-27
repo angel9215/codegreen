@@ -1,0 +1,508 @@
+/*
+Bootstrap classes:
+    .navigation-previous-page-icon:
+        .glyphicon.
+        glyphicon-menu-left
+    .navigation-next-page-icon:
+        .glyphicon
+        .glyphicon-menu-right
+*/
+
+$linkColor1: $backgroundColor1;
+$linkColor2: $backgroundColor3;
+a {
+    /*Text*/
+        color: $linkColor1;
+        text-decoration: none;
+}
+
+a:visited {
+    /*Text*/
+        color: $linkColor2;
+}
+
+a:hover, a:focus {
+    /*Text*/
+        color: $linkColor1;
+        text-decoration: underline;
+}
+
+h1 {
+    /*Sizing*/
+        margin: 2rem 0 1rem 0;
+    /*Text*/
+        font-size: 3.6rem;
+}
+
+h2 {
+    /*Sizing*/
+        margin: 2rem 0 1rem 0;
+    /*Text*/
+        font-size: 3rem;
+}
+
+h3 {
+    /*Sizing*/
+        margin: 2rem 0 1rem 0;
+    /*Text*/
+        font-size: 2.4rem;
+}
+
+h4 {
+    /*Sizing*/
+        margin: 1rem 0;
+    /*Text*/
+        font-size: 1.8rem;
+}
+
+h5 {
+    /*Sizing*/
+        margin: 1rem 0;
+    /*Text*/
+        font-size: 1.4rem;
+}
+
+h6 {
+    /*Sizing*/
+        margin: 1rem 0;
+    /*Text*/
+        font-size: 1.2rem;
+}
+
+$hrColor1: $textColor2;
+hr {
+    /*Sizing*/
+        margin: 2rem 0;
+    /*Presentation*/
+        border-color: $hrColor1;
+}
+
+p {
+    /*Sizing*/
+        margin-bottom: 1rem;
+}
+
+$blockquoteColor1: $backgroundColor1;
+blockquote {
+    /*Sizing*/
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    /*Presentation*/
+        border-color: $blockquoteColor1;
+}
+
+$codeBackgroundColor1: $textColor1;
+$codeTextColor1: $backgroundColor2;
+code, kbd {
+    /*Text*/
+        color: $codeTextColor1;
+    /*Presentation*/
+        background-color: $codeBackgroundColor1;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+i, em {
+    font-style: italic;
+}
+
+dl {
+    /*Sizing*/
+        margin-bottom: 1rem;
+}
+
+ul {
+    /*Sizing*/
+        margin-bottom: 1rem;
+}
+
+ol {
+    /*Sizing*/
+        margin-bottom: 1rem;
+}
+
+th, td {
+    /*Sizing*/
+        padding: 0 .5rem;
+}
+
+.btn {
+    /*Text*/
+        font-size: 1.4rem;
+}
+
+.page-header {
+    /*Sizing*/
+        margin: 0;
+        padding: 0;
+        border: 0;
+}
+
+$pageTitleShadow: $textShadow;
+.page-title {
+    /*Sizing*/
+        margin-top: 0;
+        margin-bottom: 2rem;
+    /*Text*/
+        text-shadow: $pageTitleShadow;
+}
+
+$entryTitleShadow: $textShadow;
+.entry-title {
+    /*Sizing*/
+        margin-top: 0;
+    /*Text*/
+        text-shadow: $entryTitleShadow;
+}
+
+$entryTitleColor: $textColor1;
+.entry-title a {
+    /*Text*/
+        color: $entryTitleColor;
+}
+
+.entry-meta {
+    /*Sizing*/
+        margin-bottom: 1rem;
+}
+
+.entry-footer {
+    /*Sizing*/
+        margin-bottom: 1rem;
+}
+
+.page-links {
+    /*Sizing*/
+        margin-bottom: 1rem;
+}
+
+.wp-pagination {
+    /*Sizing*/
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+    /*Text*/
+        text-align: center;
+}
+
+.wp-pagination .navigation-previous-page-icon, .wp-pagination .navigation-next-page-icon {
+    /*Text*/
+        vertical-align: -0.1em;
+}
+
+.wp-pagination .pagination {
+    /*Sizing*/
+        margin: 0;
+}
+
+$paginationTextColor: $backgroundColor1;
+.wp-pagination .pagination a {
+    /*Text*/
+        color: $paginationTextColor;
+}
+
+$paginationActiveItemBackgroundColor: $backgroundColor1;
+.wp-pagination .pagination .active span {
+    /*Presentation*/
+        background-color: $paginationActiveItemBackgroundColor;
+        border-color: $paginationActiveItemBackgroundColor;
+}
+
+.post-navigation {
+    /*Sizing*/
+        margin-top: 4rem;
+        margin-bottom: 1rem;
+}
+
+.post-navigation .screen-reader-text {
+    /*Sizing*/
+        display: none;
+}
+
+.post-navigation .nav-links {
+    /*Sizing*/
+        overflow: hidden;
+}
+
+.post-navigation .nav-previous {
+    /*Sizing*/
+        float: left;
+}
+
+.post-navigation .nav-next {
+    /*Sizing*/
+        float: right;
+}
+
+.post-navigation .pager {
+    /*Sizing*/
+        margin: 0;
+}
+
+.post-navigation .navigation-previous-page-icon {
+    /*Text*/
+        vertical-align: -0.1em;
+}
+
+.search-page .widget-content, .not-found .widget-content {
+    /*Sizing*/
+        margin-bottom: 1rem;
+}
+
+.search-page .widget-title, .not-found .widget-title {
+    /*Sizing*/
+        margin-top: 0;
+        margin-bottom: 1rem;
+}
+
+.search-page .widget ul, .not-found .widget ul {
+    /*Sizing*/
+        padding: 0;
+        margin: 0;
+    /*Presentation*/
+        list-style: none;
+}
+
+.widget_categories .children {
+    /*Sizing*/
+        margin-left: 1em;
+}
+
+.widget_nav_menu .sub-menu {
+    /*Sizing*/
+        margin-left: 1em;
+}
+
+.widget_search .search-form {
+    /*Sizing*/
+        width: 18em;
+        max-width: 100%;
+        display: table;
+        vertical-align: middle;
+}
+
+.widget_search .search-form label {
+    /*Sizing*/
+        width: 100%;
+        display: table-cell;
+}
+
+.widget_search .search-field {
+    /*Sizing*/
+        width: 100%;
+}
+
+.widget_search .search-submit {
+    /*Sizing*/
+        margin-left: 0.1em;
+}
+
+$rssWidgetTitleLinkColor: $textColor1;
+.widget_rss .widget-title a {
+    /*Text*/
+        color: $rssWidgetTitleLinkColor;
+}
+
+.widget_calendar table {
+    /*Sizing*/
+        margin: 0 auto;
+        max-width:100%;
+    /*Text*/
+        font-size: 1.1em;
+}
+
+.widget_calendar th, .widget_calendar td {
+    /*Sizing*/
+        padding: 0.1em 0.8em;
+}
+
+.widget_media_image .widget-content {
+    /*Sizing*/
+        text-align: center;
+}
+
+.widget_media_image .image {
+    /*Sizing*/
+        max-width: 100%;
+}
+
+.widget.widget_media_audio .widget-content {
+    /*Sizing*/
+        overflow: visible;
+}
+
+/*.widget_media_audio audio, */.widget_media_audio .mejs-container {
+    /*Sizing*/
+        margin: 0 auto;
+        max-width: 100%;
+}
+
+.widget.widget_media_video .widget-content {
+    /*Sizing*/
+        overflow: visible;
+}
+
+/*.widget_media_video video, */.widget_media_video .mejs-container {
+    /*Sizing*/
+        margin: 0 auto;
+        max-width: 100%;
+}
+
+.comments-area .comments-title {
+    /*Sizing*/
+        margin-bottom: 1rem;
+    /*Text*/
+        font-size: 1.85em;
+}
+
+$commentBackgroundColor: rgba($backgroundColor4, 0.6);
+$commentBorderRadius: $borderRadius;
+$commentBorderRadiusFallback: $borderRadiusFallback;
+.comment-list .comment {
+    /*Sizing*/
+        padding: 1rem;
+        margin-bottom: 1rem;
+    /*Presentation*/
+        background-color: $commentBackgroundColor;
+        border-radius: $commentBorderRadiusFallback;
+        border-radius: $commentBorderRadius;
+}
+
+.comment-list .comment-meta {
+    /*Sizing*/
+        margin-bottom: 1rem;
+}
+
+.comment-list .children > .comment {
+    /*Presentation*/
+        background-color: transparent;
+}
+
+.comment-list {
+    /*Sizing*/
+        padding-left: 0;
+    /*Presentation*/
+        list-style: none;
+}
+
+.comment-list .children{
+    /*Sizing*/
+        margin-left: 2em;
+        padding-left: 0;
+    /*Presentation*/
+        list-style: none;
+}
+
+$commentFormBackgroundColor: rgba($backgroundColor4, 0.6);
+$commentFormBorderRadius: $borderRadius;
+$commentFormBorderRadiusFallback: $borderRadiusFallback;
+.comment-respond {
+    /*Sizing*/
+        padding: 1rem;
+    /*Presentation*/
+        background-color: $commentFormBackgroundColor;
+        border-radius: $commentFormBorderRadiusFallback;
+        border-radius: $commentFormBorderRadius;
+}
+
+.comment-respond .comment-reply-title small a {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.comment-form {
+    /*Sizing*/
+        margin-left: 3em;
+}
+
+.comment-form .comment-notes, .comment-form .logged-in-as, .comment-form .must-log-in {
+    /*Text*/
+        font-size: 0.85em;
+}
+
+.comment-form .comment-form-comment textarea {
+    /*Sizing*/
+        width: 35em;
+        max-width: 100%;
+}
+
+.comment-form .comment-form-author input {
+    /*Sizing*/
+        width: 35em;
+        max-width: 100%;
+}
+
+.comment-form .comment-form-email input {
+    /*Sizing*/
+        width: 35em;
+        max-width: 100%;
+}
+
+.comment-form .comment-form-url input {
+    /*Sizing*/
+        width: 35em;
+        max-width: 100%;
+}
+
+.comment-form label {
+    /*Sizing*/
+        display: block;
+}
+
+.css-comment-form .comment-notes {
+    /*Presentation*/
+        opacity: 0.5;
+}
+
+.css-comment-form .email-notes:after {
+    /*Sizing*/
+        display: block;
+    /*Misc*/
+        content: '';
+}
+
+.gallery .gallery-item {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 1rem 0;
+    padding: 0.5rem;
+    
+    text-align: center;
+}
+
+.gallery-columns-1 .gallery-item {
+    width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+    width: 100%/2;
+}
+
+.gallery-columns-3 .gallery-item {
+    width: 100%/3;
+}
+
+.gallery-columns-4 .gallery-item {
+    width: 100%/4;
+}
+
+.gallery-columns-5 .gallery-item {
+    width: 100%/5;
+}
+
+.gallery-columns-6 .gallery-item {
+    width: 100%/6;
+}
+
+.gallery-columns-7 .gallery-item {
+    width: 100%/7;
+}
+
+.gallery-columns-8 .gallery-item {
+    width: 100%/8;
+}
+
+.gallery-columns-9 .gallery-item {
+    width: 100%/9;
+}

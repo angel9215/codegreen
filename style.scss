@@ -1,0 +1,83 @@
+/*!
+Theme Name: Code Green
+Author: angel9215
+Description: 
+Version: 0.6alpha
+License: GPL
+*/
+
+$backgroundColor1: #a5be00; //Green
+$backgroundColor2: #f7f4f3; //White
+$backgroundColor3: #60a561; //Dark green
+$backgroundColor4: #ffffff; //White
+
+$textColor1: #0d0a0b; //Black gray
+$textColor2: #555749; //Light gray
+
+$highlightColor: #5641e6;
+
+$textFont: 'source_code_pro', 'Courier New', monospace;
+$titleFont: 'nimbus_mono', 'Courier New', monospace;
+
+$textShadow: 1px 1px 5px rgba($textColor2, .8);
+
+$baseFontSize: 10px;
+$baseFontSizeScrRel: 0.520833vw; //Based on 10px = 1 rem, 1920px width
+
+$contentWidth: 90%;
+$contentMinWidth: 350px;
+
+$baseMargin: 1rem;
+$basePadding: 1rem;
+
+$backgroundTransparency1: 0.9;
+$backgroundTransparency2: 0.5;
+$backgroundTransparency3: 0.8;
+
+$borderShadow: 0px 0px 1px 1px rgba($textColor1, 0.05);
+
+$borderRadiusFallback: 2px;
+$borderRadius: 0.1vw;
+
+$backgroundTexture: url('img/background-texture.png');
+
+$globalMenuFontSize: 1.3em;
+
+$globalHeaderHeight: 16em;
+$globalHeaderMargin: 1em;
+$globalHeaderDescriptionIndent: 1.5em;
+$globalHeaderTitleTextMult: 0.8;
+$globalHeaderDescriptionTextMult: 0.2;
+
+$globalFooterMinHeight: 5em;
+
+@import 'sass/misc';
+@import 'sass/elements';
+@import 'sass/layout';
+@import 'sass/menu';
+@import 'sass/header';
+@import 'sass/content';
+@import 'sass/footer';
+@import 'sass/sidebar';
+
+body {
+	/*Presentation*/
+        background-color: $backgroundColor1;
+        background-image: $backgroundTexture;
+    /*Text*/
+        color: $textColor1;
+        font-family: $textFont;
+        font-size: 1.4rem;
+}
+
+html {
+    /*Text*/
+        font-size: $baseFontSize;
+}
+
+@media (min-width: 1922px) {
+    html {
+        /*Text*/
+            font-size: $baseFontSizeScrRel;
+    }
+}

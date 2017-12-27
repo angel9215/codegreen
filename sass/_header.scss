@@ -1,0 +1,85 @@
+$headerBackgroundColor: $backgroundColor2;
+$headerBackgroundTransparency: $backgroundTransparency2;
+$headerBackground: rgba($headerBackgroundColor, $headerBackgroundTransparency);
+$headerBorderRadius: $borderRadius;
+$headerBorderRadiusFallback: $borderRadiusFallback;
+$headerBoderShadow: $borderShadow;
+$headerHeight: $globalHeaderHeight;
+$headerMargin: $globalHeaderMargin;
+$headerDescriptionIndent: $globalHeaderDescriptionIndent;
+$headerTextSize: $headerHeight;
+$headerTitleTextMult: $globalHeaderTitleTextMult;
+$headerDescriptionTextMult: $globalHeaderDescriptionTextMult;
+$headerFont: $titleFont;
+$headerTextColor: $textColor1;
+$headerTextShadow: $textShadow;
+
+.site-branding {
+    /*Sizing*/
+        max-width: 100%;
+        
+        overflow-x: auto; /*keep any problem image or text from showing on top or below other elements*/
+        overflow-y: hidden;
+        
+        height: $headerHeight; /*use all avaialble space*/
+        float: right; /*move header to the right*/
+        /*display: inline-block;*/ /*make header take content space*/
+        /*display: flex;*/ /*apply flex display if supported*/
+   /*Presentation*/
+        background-color: $headerBackgroundColor;
+        background-color: $headerBackground;
+        
+        border-radius: $headerBorderRadiusFallback;
+        border-radius: $headerBorderRadius;
+        
+        box-shadow: $headerBoderShadow;
+    /*Text*/
+        font-family: $headerFont;
+        color: $headerTextColor;
+        text-shadow: $headerTextShadow;
+        white-space: nowrap; /*prevent header from wrapping*/
+}
+
+.custom-logo-link {
+    /*Sizing*/
+        float: left; /*put logo on the left*/
+        display: block; /*allow floating*/
+        align-self: center; /*center logo using flex*/
+}
+
+.custom-logo { /*img*/
+    /*Sizing*/
+        height: $headerHeight; /*ie11 fix*/
+        width: auto; /*resize keeping aspect ratio*/
+}
+
+.site-branding-text {
+    /*Sizing*/
+        height: 100%; /*use all available space*/
+        margin: 0 $headerMargin;
+        display: inline-block; /*fallback for flex, ocupy content space, let browser decide vertical distribution*/
+        display: inline-flex; /*enable flex on title text*/
+        flex-direction: column; /*lay text elements vertically*/
+        justify-content: center; /*vertically center text elements*/
+}
+
+.site-title {
+    /*Sizing*/
+        margin: 0;
+    /*Text*/
+        font-size: $headerTextSize * $headerTitleTextMult; /*calculate font size based on height and given ratio, if too many words or font too high overflow can happen*/
+        line-height: 1; /*reset line height*/
+}
+
+.site-title a {
+    /*Text*/
+        color: $headerTextColor;
+        text-decoration: none;
+}
+
+.site-description {
+    /*Sizing*/
+        margin: 0 0 0 $headerDescriptionIndent;
+    /*Text*/
+        font-size: $headerTextSize * $headerDescriptionTextMult; /*calculate font size based on height and given ratio, if too many words or font too high overflow can happen*/
+}

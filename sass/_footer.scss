@@ -1,0 +1,48 @@
+$footerBackgroundColor: $backgroundColor2;
+$footerBackgroundTransparency: $backgroundTransparency2;
+$footerBackground: rgba($footerBackgroundColor, $footerBackgroundTransparency);
+$footerContentWidth: $contentWidth;
+$footerContentTextShadow: $textShadow;
+$footerContentPadding: $basePadding;
+
+.site-footer {
+    /*Presentation*/
+        background-color: $footerBackgroundColor;
+        background-color: $footerBackground;
+    /*Text*/
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+}
+
+.site-footer-content {
+    /*Sizing*/
+        width: $footerContentWidth;
+        overflow: hidden;
+        padding: $footerContentPadding;
+        text-shadow: $footerContentTextShadow;
+}
+/*
+    Bootstrap classes:
+        .center-block
+*/
+
+.site {
+    /*Sizing*/
+        /*Flexbox sticky footer*/
+        flex: 1 0 auto;
+}
+
+body {
+    /*Sizing*/
+        /*Flexbox sticky footer*/
+        display: flex;
+        flex-direction: column;
+
+        height: 100%;
+}
+
+html {
+    /*Sizing*/
+        /*Flexbox sticky footer*/
+        height: 100%;
+}

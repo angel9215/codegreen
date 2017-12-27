@@ -1,0 +1,132 @@
+$contentBorderRadius: $borderRadius;
+$contentBorderRadiusFallback: $borderRadiusFallback;
+$contentAreaBackgroundColor: $backgroundColor2;
+$contentAreaTransparency: $backgroundTransparency1;
+$contentAreaBackground: rgba($contentAreaBackgroundColor, $contentAreaTransparency);
+$contentPadding: $basePadding;
+$contentVerticalPaddingMult: 2;
+$contentVerticalPadding: $contentVerticalPaddingMult * $basePadding;
+$contentArticleMarginMult: 2;
+$contentArticleMargin: $contentArticleMarginMult * $baseMargin;
+$contentSearchFormMargin: 1rem;
+
+.content-area {
+    /*#Sizing*/
+        overflow: auto;
+        padding: $contentVerticalPadding $contentPadding;
+    /*Presentation*/
+        background-color: $contentAreaBackgroundColor;
+        background-color: $contentAreaBackground;
+
+        border-radius: $contentBorderRadiusFallback;
+        border-radius: $contentBorderRadius;
+    /*Text*/
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+}
+
+.content-area .hentry {
+    /*Sizing*/
+        margin-bottom: $contentArticleMargin;
+}
+
+.content-area .entry-content:after, .content-area .comment-content:after {
+    /*Content clearfix*/
+    /*Sizing*/
+        display: table;
+    /*Misc*/
+        content: "";
+}
+
+.content-area .entry-content:after, .content-area .comment-content:after {
+    /*Content clearfix*/
+    /*Sizing*/
+        display: table;
+        clear: both;
+    /*Misc*/
+        content: "";
+}
+
+.content-area .search-form {
+    margin-bottom: $contentSearchFormMargin;
+}
+
+.content-area img, .content-area embed, .content-area iframe, .content-area object {
+    /*Sizing*/
+        max-width: 100%;
+}
+
+.content-area img {
+    /*Sizing*/
+        height: auto;
+}
+
+.content-area table {
+    /*Sizing*/
+        max-width: 100%;
+}
+/*
+    Bootstrap classes:
+        .table-striped (js)
+        .table-bordered (js)
+*/
+
+.content-area img {
+    /*Sizing*/
+        margin: 0.5rem;
+}
+
+.content-area img.alignleft {
+    /*Sizing*/
+        float: left;
+}
+
+.content-area img.alignright {
+    /*Sizing*/
+        float: right;
+}
+
+.content-area figure {
+    /*Sizing*/
+        margin: 0.5rem;
+        max-width: 100%;
+}
+
+.content-area figure.alignleft {
+    /*Sizing*/
+        display: inline;
+        float: left;
+}
+
+.content-area figure.alignright {
+    /*Sizing*/
+        display: inline;
+        float: right;
+}
+
+.content-area figure.aligncenter {
+    /*Sizing*/
+        display: block;
+        clear: both;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+.content-area figure img {
+    /*Sizing*/
+        margin: 0;
+}
+
+.content-area figure figcaption {
+    /*Sizing*/
+        margin: 0.5rem 0 0 0;
+        padding: 0 1rem;
+        max-width: 100%;
+    /*Presentation*/
+        opacity: 0.6;
+}
+
+.content-area .wp-audio-shortcode {
+    /*Sizing*/
+        max-width: 50em;
+}
