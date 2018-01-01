@@ -61,6 +61,11 @@ $contentSearchFormMargin: 1rem;
         height: auto;
 }
 
+.content-area ul, .content-area ol {
+    /*Sizing*/
+        overflow: hidden;
+}
+
 .content-area table {
     /*Sizing*/
         max-width: 100%;
