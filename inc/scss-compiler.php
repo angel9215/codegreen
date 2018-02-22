@@ -4,10 +4,11 @@
  *
  * @package codeGreen
  */
+ //Import scss
+ include_once __DIR__ . '/../lib/scss/scss.inc.php';
 
 class ScssCompiler {
     public static $_themePath = null;
-    public static $_libraryPath = '/lib/scss/scss.inc.php';
     
     private static function _getThemePath() {
         if (self::$_themePath == null) {
@@ -17,12 +18,7 @@ class ScssCompiler {
         }
     }
     
-    private static function _getLibraryPath() {
-        return self::_getThemePath() . self::$_libraryPath;
-    }
-    
     public static function compile($scssString, $optionsCallback = null) {
-        include_once self::_getLibraryPath();
         
         $scss = new \Leafo\ScssPhp\Compiler();
         $scss->setImportPaths(self::_getThemePath());
